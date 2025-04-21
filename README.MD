@@ -14,3 +14,61 @@ Lets take a look inside the `src` folder
  is a efficient way to write cleaner code. this is done in the `server-config.js` folder.
 
 - `routes`-> In this folder we are register a route and the corresponding middleware and controllers to it.
+
+- `middlewares`-> It is just handle the incoming request where we can write our validation, authentication etc.
+
+- `controllers`-> It is mainly handle the business logic and in controller we just receive request from client. after that execute the business logic and sending to the businesss layer over the router and router send the output.
+
+- `repositories` -> This folder contains all the logic in which we can interact with database for data, all the raw queries are go there.
+
+- `services` -> This folder contain all the business logic of the project and interacts with repositories for data from the database
+
+- `utils`-> this folder contains all the helper function and we can use anywhere in the project.
+
+
+### Setup the project
+
+- Download this Template from github in your local machine and open it to your text editor.
+- In the root directory create an `.env` folder and add the following env variables.
+   ```
+      PORT = < take port of your choice>
+   ```
+   ex :
+   ``` 
+      PORT = 3000
+   ```
+- Inside the `src/config` folder create a file named as `config.js` and write the following code :
+
+
+   ```
+        {
+            "development": {
+            "username": "root",
+             "password": null,
+             "database": "database_development",
+              "host": "127.0.0.1",
+              "dialect": "mysql"
+  },
+     "test": {
+               "username": "root",
+               "password": null,
+               "database": "database_test",
+                "host": "127.0.0.1",
+                "dialect": "mysql"
+  },
+            "production": {
+            "username": "root",
+           "password": null,
+           "database": "database_production",
+           "host": "127.0.0.1",
+          "dialect": "mysql"
+  }
+}
+    
+ 
+   ```
+
+- if you are setting up your development environment, then write the username of your database, mentiond password of your database 
+ and also mentioned which database you are going to use ex : mysql etc.
+     
+- if you are setting up test or production environment, make suer you also replace the host with DB url.
