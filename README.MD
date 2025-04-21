@@ -37,4 +37,38 @@ Lets take a look inside the `src` folder
    ``` 
       PORT = 3000
    ```
-   
+- Inside the `src/config` folder create a file named as `config.js` and write the following code :
+
+
+   ```
+        {
+            "development": {
+            "username": "root",
+             "password": null,
+             "database": "database_development",
+              "host": "127.0.0.1",
+              "dialect": "mysql"
+  },
+     "test": {
+               "username": "root",
+               "password": null,
+               "database": "database_test",
+                "host": "127.0.0.1",
+                "dialect": "mysql"
+  },
+            "production": {
+            "username": "root",
+           "password": null,
+           "database": "database_production",
+           "host": "127.0.0.1",
+          "dialect": "mysql"
+  }
+}
+    
+ 
+   ```
+
+- if you are setting up your development environment, then write the username of your database, mentiond password of your database 
+ and also mentioned which database you are going to use ex : mysql etc.
+     
+- if you are setting up test or production environment, make suer you also replace the host with DB url.
