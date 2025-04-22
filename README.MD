@@ -1,4 +1,4 @@
-### Nodejs project
+### Nodejs template project 
 This is an Basic Example Nodejs project Templete, which anyone can use it.
 It has been build on top off the most important coding principles and project management 
 recommendations. Feel free to change anything.
@@ -7,7 +7,17 @@ recommendations. Feel free to change anything.
 - `src` -> Inside this folder all the code of this project will reside, this will not 
 Include any kind of tests.
 
+- To configure all the environments execute the following command:
+  ```
+   npm install
+   ```
+- To Run the serevr execute the following command :
+  ```
+   npm run start
+   ```
+
 Lets take a look inside the `src` folder
+
 
 - `config`-> In this folder we are warpping up all our project configurations or setup 
  of a library or module will be done. For example: setting up `dotenv` so that we can 
@@ -38,38 +48,16 @@ Lets take a look inside the `src` folder
    ``` 
       PORT = 3000
    ```
-- Inside the `src/config` folder create a file named as `config.js` and write the following code :
-
+- Go Innside the `src` folder and execute the  following Command:
 
    ```
-        {
-            "development": {
-            "username": "root",
-             "password": null,
-             "database": "database_development",
-              "host": "127.0.0.1",
-              "dialect": "mysql"
-  },
-     "test": {
-               "username": "root",
-               "password": null,
-               "database": "database_test",
-                "host": "127.0.0.1",
-                "dialect": "mysql"
-  },
-            "production": {
-            "username": "root",
-           "password": null,
-           "database": "database_production",
-           "host": "127.0.0.1",
-          "dialect": "mysql"
-  }
-}
-    
- 
+   npm install sequelize-cli
    ```
 
 - if you are setting up your development environment, then write the username of your database, mentiond password of your database 
  and also mentioned which database you are going to use ex : mysql etc.
      
 - if you are setting up test or production environment, make suer you also replace the host with DB url.
+
+- `Miggrations` folder can maintain your virsion controll of database
+- `seeders` inside this folder, it is generally testing purpose.
